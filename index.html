@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Camionetas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+      .camionetas-container {
+        margin-bottom: 30px;
+      }
+      .camioneta {
+        position: relative;
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 5px;
+        background-color: #fff;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .camioneta-info {
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+      .search-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .search-input {
+        padding: 5px;
+        margin-right: 10px;
+        font-size: 14px;
+      }
+      .search-container button {
+        padding: 5px 10px;
+        font-size: 14px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .camioneta button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 12px;
+        padding: 2px 5px;
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .camioneta button.rotulado {
+        background-color: #28a745;
+      }
+      /* Lista de camionetas */
+      .camionetas-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .camionetas-list li {
+        margin-bottom: 10px;
+      }
+      /* Efecto arcoíris en los contornos */
+    .camioneta {
+      /* Resto de estilos existentes */
+      border: 2px solid;
+      border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+      border-image-slice: 1;
+    }
+    </style>
+
+  </head>
+  <body>
+    <h1>Lista de Camionetas</h1>
+
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Ingrese número de camioneta"
+      />
+      <button onclick="buscarCamioneta()">Buscar</button>
+    </div>
+
+    <!--GRUPO NERIA SENCILLA-->
+    <div class="camionetas-container">
+      <h2>SENCILLA GN</h2>
+      <ul class="camionetas-list">
+        <!-- ... lista de camionetas ... -->
+        <li class="camioneta">
+          <div class="camioneta-info">Número: 4-2</div>
+          <div class="camioneta-info">Modelo: FORD</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <li class="camioneta">
+          <div class="camioneta-info">Número: 5-9</div>
+          <div class="camioneta-info">Modelo: DODGE RAM</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <li class="camioneta">
+          <div class="camioneta-info">Número: 5-10</div>
+          <div class="camioneta-info">Modelo: DODGE</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <li class="camioneta">
+            <div class="camioneta-info">numero: 5-11</div>
+            <div class="camioneta-info">Modelo: DODGE</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: 5-14 </div>
+            <div class="camioneta-info">Modelo: CHEVROLET</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>        <li class="camioneta">
+            <div class="camioneta-info">numero: 5-18 </div>
+            <div class="camioneta-info">Modelo: CHEVROLET</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: 5-24</div>
+            <div class="camioneta-info">Modelo: FORD F350</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: 5-29</div>
+            <div class="camioneta-info">Modelo: DODGE</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: 5-31</div>
+            <div class="camioneta-info">Modelo: FORD</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: 5-33</div>
+            <div class="camioneta-info">Modelo: CHEVROLET</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: 5-34</div>
+            <div class="camioneta-info">Modelo: CHEVROLET</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: 5-35</div>
+            <div class="camioneta-info">Modelo: CHEVROLET</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: 5-36</div>
+            <div class="camioneta-info">Modelo: CHEVROLET</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: 5-37</div>
+            <div class="camioneta-info">Modelo: CHEVROLET</div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+          <li class="camioneta">
+            <div class="camioneta-info">numero: </div>
+            <div class="camioneta-info">Modelo: </div>
+            <button onclick="marcarCamioneta(this)">Rotular</button>
+          </li>
+
+        <!-- Agrega hasta 50 camionetas aquí -->
+
+      </ul>
+    </div>
+
+    <!--SUPER POLLO NERIA SENCILLA-->
+    <div class="camionetas-container">
+      <h2>SENCILLA SPN</h2>
+      <ul class="camionetas-list">
+        <!-- ... lista de camionetas ... -->
+        <div class="camioneta-info">Número: 4-1</div>
+        <div class="camioneta-info">Modelo: CHEVROLET</div>
+        <button onclick="marcarCamioneta(this)">Rotular</button>
+      </li>
+      <li class="camioneta">
+        <div class="camioneta-info">Número: 5-3</div>
+        <div class="camioneta-info">Modelo: CHEVROLET</div>
+        <button onclick="marcarCamioneta(this)">Rotular</button>
+      </li>
+      <li class="camioneta">
+        <div class="camioneta-info">Número: 5-5</div>
+        <div class="camioneta-info">Modelo: FORD</div>
+        <button onclick="marcarCamioneta(this)">Rotular</button>
+      </li>
+      <li class="camioneta">
+        <div class="camioneta-info">Número: 5-6</div>
+        <div class="camioneta-info">Modelo: FORD</div>
+        <button onclick="marcarCamioneta(this)">Rotular</button>
+      </li>
+      <li class="camioneta">
+        <div class="camioneta-info">Número: 5-20</div>
+        <div class="camioneta-info">Modelo: CHEVROLET</div>
+        <button onclick="marcarCamioneta(this)">Rotular</button>
+      </li>
+      <li class="camioneta">
+          <div class="camioneta-info">numero: 5-21 </div>
+          <div class="camioneta-info">Modelo: FORD F350</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <li class="camioneta">
+          <div class="camioneta-info">numero: 5-22 </div>
+          <div class="camioneta-info">Modelo:  FORD F350</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <li class="camioneta">
+          <div class="camioneta-info">numero: 5-23</div>
+          <div class="camioneta-info">Modelo: FORD F350</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <li class="camioneta">
+          <div class="camioneta-info">numero: 5-32</div>
+          <div class="camioneta-info">Modelo: CHEVROLET</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+      <!-- Agrega hasta 50 camionetas aquí -->
+
+      </ul>
+    </div>
+
+    <!--GRUPO NERIA DOBLE CABINA-->
+    <div class="camionetas-container">
+      <h2>DOBLE GN</h2>
+      <ul class="camionetas-list">
+        <!-- ... lista de camionetas ... -->
+        <li class="camioneta">
+          <div class="camioneta-info">Número: 13</div>
+          <div class="camioneta-info">Modelo: Modelo Doble GN-1</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <li class="camioneta">
+          <div class="camioneta-info">Número: 542</div>
+          <div class="camioneta-info">Modelo: Modelo Doble GN-2</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <!-- Agrega hasta 50 camionetas aquí -->
+      </ul>
+    </div>
+<!--SUPER POLLO NERIA DOBLE CABINA-->
+    <div class="camionetas-container">
+      <h2>DOBLE SPN</h2>
+      <ul class="camionetas-list">
+        <li class="camioneta">
+          <div class="camioneta-info">Número: 41</div>
+          <div class="camioneta-info">Modelo: Modelo Doble SPN-1</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <li class="camioneta">
+          <div class="camioneta-info">Número: 23</div>
+          <div class="camioneta-info">Modelo: Modelo Doble SPN-2</div>
+          <button onclick="marcarCamioneta(this)">Rotular</button>
+        </li>
+        <!-- Agrega hasta 50 camionetas aquí -->
+
+      </ul>
+    </div>
+
+    
+
+   
+    <script>
+
+ // Función para cargar el estado de rotulado y la fecha desde el almacenamiento local
+ function cargarEstadoCamionetas() {
+  const camionetas = document.querySelectorAll(".camioneta");
+
+  camionetas.forEach((camioneta) => {
+    const numeroCamioneta = camioneta.querySelector(".camioneta-info").textContent.trim();
+    const estadoRotulado = localStorage.getItem(numeroCamioneta + "-estado");
+    const fechaRotulacion = localStorage.getItem(numeroCamioneta + "-fecha");
+
+    if (estadoRotulado === "rotulada") {
+      const btn = camioneta.querySelector("button");
+      btn.classList.add("rotulado");
+      btn.textContent = "Rotulada el " + fechaRotulacion; // Mostrar la fecha en el botón
+    }
+  });
+}
+
+// Función para guardar el estado de rotulado y la fecha en el almacenamiento local
+function guardarEstadoCamioneta(numeroCamioneta, estado) {
+  const fechaActual = new Date().toLocaleDateString(); // Obtener la fecha actual en formato "dd/mm/yyyy"
+  localStorage.setItem(numeroCamioneta + "-estado", estado);
+  localStorage.setItem(numeroCamioneta + "-fecha", fechaActual);
+}
+
+// Función para manejar el evento de rotulado de una camioneta
+function marcarCamioneta(btn) {
+  const confirmation = confirm("¿Desea rotular esta camioneta?");
+  if (confirmation) {
+    const camioneta = btn.closest(".camioneta");
+    const numeroCamioneta = camioneta.querySelector(".camioneta-info").textContent.trim();
+
+    if (btn.classList.contains("rotulado")) {
+      btn.classList.remove("rotulado");
+      btn.textContent = "Rotular";
+      guardarEstadoCamioneta(numeroCamioneta, "no_rotulada");
+    } else {
+      btn.classList.add("rotulado");
+      const fechaActual = new Date().toLocaleDateString(); // Obtener la fecha actual en formato "dd/mm/yyyy"
+      btn.textContent = "Rotulada el " + fechaActual;
+      guardarEstadoCamioneta(numeroCamioneta, "rotulada");
+    }
+  }
+}
+
+  function marcarCamioneta(btn) {
+    const confirmation = confirm("¿Desea rotular esta camioneta?");
+    if (confirmation) {
+      const camioneta = btn.closest(".camioneta");
+      const numeroCamioneta = camioneta.querySelector(".camioneta-info").textContent.trim();
+
+      if (btn.classList.contains("rotulado")) {
+        btn.classList.remove("rotulado");
+        btn.textContent = "Rotular";
+        guardarEstadoCamioneta(numeroCamioneta, "no_rotulada");
+      } else {
+        btn.classList.add("rotulado");
+        btn.textContent = "Rotulada";
+        guardarEstadoCamioneta(numeroCamioneta, "rotulada");
+      }
+    }
+  }
+
+  function buscarCamioneta() {
+    const input = document.querySelector(".search-input");
+    const textoBusqueda = input.value.trim().toLowerCase();
+
+    const camionetas = document.querySelectorAll(".camioneta");
+    camionetas.forEach((camioneta) => {
+      const numeroCamioneta = camioneta.querySelector(".camioneta-info:nth-child(1)").innerText.toLowerCase();
+      const modeloCamioneta = camioneta.querySelector(".camioneta-info:nth-child(2)").innerText.toLowerCase();
+      const grupoCamioneta = camioneta.parentNode.parentNode.querySelector("h2").textContent.toLowerCase();
+
+      const textoCombinado = `${numeroCamioneta} ${modeloCamioneta} ${grupoCamioneta}`;
+
+      if (textoBusqueda === "" || textoCombinado.includes(textoBusqueda)) {
+        camioneta.style.display = "block";
+      } else {
+        camioneta.style.display = "none";
+      }
+    });
+  }
+
+  // Evento click del botón de búsqueda
+  const btnBuscar = document.querySelector(".search-container button");
+  btnBuscar.addEventListener("click", buscarCamioneta);
+
+  // Llamar a la función para cargar el estado de rotulado al cargar la página
+  cargarEstadoCamionetas();
+    </script>
+    
+  </body>
+</html>
+
