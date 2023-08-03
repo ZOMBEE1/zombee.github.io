@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Lista de Camionetas</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f0f0f0;
-      }
-      h1 {
-        margin-bottom: 20px;
-        text-align: center;
-      }
-      h2 {
-        margin-top: 30px;
-        margin-bottom: 15px;
-      }
-      .camionetas-container {
-        margin-bottom: 30px;
-      }
-      .camioneta {
-        position: relative;
-        width: 200px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin: 5px;
-        background-color: #fff;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .camioneta-info {
-        margin-bottom: 8px;
-        font-size: 14px;
-      }
-      .search-container {
-        margin-top: 20px;
-        text-align: center;
-      }
-      .search-input {
-        padding: 5px;
-        margin-right: 10px;
-        font-size: 14px;
-      }
-      .search-container button {
-        padding: 5px 10px;
-        font-size: 14px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-      }
-      .camioneta button {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        font-size: 12px;
-        padding: 2px 5px;
-        background-color: #dc3545;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .camioneta button.rotulado {
-        background-color: #28a745;
-      }
-      /* Lista de camionetas */
-      .camionetas-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .camionetas-list li {
-        margin-bottom: 10px;
-      }
-      /* Efecto arcoíris en los contornos */
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista de Camionetas</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    .camionetas-container {
+      margin-bottom: 30px;
+    }
+    .camioneta {
+      position: relative;
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 5px;
+      background-color: #fff;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .camioneta-info {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .search-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .search-input {
+      padding: 5px;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+    .search-container button {
+      padding: 5px 10px;
+      font-size: 14px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .camioneta button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 12px;
+      padding: 2px 5px;
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .camioneta button.rotulado {
+      background-color: #28a745;
+    }
+    /* Lista de camionetas */
+    .camionetas-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .camionetas-list li {
+      margin-bottom: 10px;
+    }
+    /* Efecto arcoíris en los contornos */
     .camioneta {
       /* Resto de estilos existentes */
       border: 2px solid;
       border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
       border-image-slice: 1;
+    }
+
+    /* Estilos específicos para pantallas móviles */
+    @media screen and (max-width: 600px) {
+      .camioneta {
+        width: 100%; /* Ajustar el ancho al 100% del contenedor en pantallas móviles */
+      }
     }
     </style>
 
