@@ -343,7 +343,7 @@ function marcarCamioneta(btn) {
   const confirmation = confirm("¿Desea rotular esta camioneta?");
   if (confirmation) {
     const camioneta = btn.closest(".camioneta");
-    const numeroCamioneta = camioneta.querySelector(".camioneta-info:nth-child(1)").innerText.trim();
+    const numeroCamioneta = camioneta.querySelector(".camioneta-info").textContent.trim();
 
     if (btn.classList.contains("rotulado")) {
       btn.classList.remove("rotulado");
@@ -364,9 +364,9 @@ function buscarCamioneta() {
 
   const camionetas = document.querySelectorAll(".camioneta");
   camionetas.forEach((camioneta) => {
-    const numeroCamioneta = camioneta.querySelector(".camioneta-info:nth-child(1)").innerText.toLowerCase();
-    const modeloCamioneta = camioneta.querySelector(".camioneta-info:nth-child(2)").innerText.toLowerCase();
-    const grupoCamioneta = camioneta.parentNode.querySelector("h2").textContent.toLowerCase();
+    const numeroCamioneta = camioneta.querySelector(".camioneta-info").textContent.trim().toLowerCase();
+    const modeloCamioneta = camioneta.querySelector(".camioneta-info:nth-child(2)").textContent.trim().toLowerCase();
+    const grupoCamioneta = camioneta.parentNode.parentNode.querySelector("h2").textContent.trim().toLowerCase();
 
     const textoCombinado = `${numeroCamioneta} ${modeloCamioneta} ${grupoCamioneta}`;
 
@@ -383,7 +383,7 @@ function cargarEstadoCamionetas() {
   const camionetas = document.querySelectorAll(".camioneta");
 
   camionetas.forEach((camioneta) => {
-    const numeroCamioneta = camioneta.querySelector(".camioneta-info:nth-child(1)").innerText.trim();
+    const numeroCamioneta = camioneta.querySelector(".camioneta-info").textContent.trim();
     const estadoRotulado = localStorage.getItem(numeroCamioneta + "-estado");
     const fechaRotulacion = localStorage.getItem(numeroCamioneta + "-fecha");
 
@@ -408,6 +408,7 @@ btnBuscar.addEventListener("click", buscarCamioneta);
 
 // Llamar a la función para cargar el estado de rotulado al cargar la página
 cargarEstadoCamionetas();
+
 
     </script>
     
