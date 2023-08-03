@@ -35,7 +35,9 @@ function mostrarCamionetas() {
   const camionetaSencillaSPNList = document.getElementById(
     "camionetaSencillaSPNList"
   );
-  const camionetaDobleGNList = document.getElementById("camionetaDobleGNList");
+  const camionetaDobleGNList = document.getElementById(
+    "camionetaDobleGNList"
+  );
   const camionetaDobleSPNList = document.getElementById(
     "camionetaDobleSPNList"
   );
